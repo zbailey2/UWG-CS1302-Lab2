@@ -27,7 +27,7 @@ public class BillItem {
 			throw new IllegalArgumentException("amount must be positive, but was " + amount);
 		}
 		this.name = name;
-		this.amount = amount;
+		this.amount = Math.round(amount * 100.00) / 100.00;
 	}
 	
 	/** Return the name for the bill item

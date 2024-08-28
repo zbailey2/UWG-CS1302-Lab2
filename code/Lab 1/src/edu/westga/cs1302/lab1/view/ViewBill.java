@@ -42,9 +42,12 @@ public class ViewBill {
 		text += System.lineSeparator();
 		text += "SUBTOTAL - $" + subTotal + System.lineSeparator();
 		double billTax = subTotal * Bill.TAX;
+		billTax = Math.round(billTax * 100.00) / 100.00;
 		double billTip = subTotal * Bill.TIP;
-		text += "TAX - $" + billTip + System.lineSeparator();
-		text += "TIP - $" + billTax + System.lineSeparator();
+		billTip = Math.round(billTip * 100.00) / 100.00;
+		subTotal = Math.round(subTotal * 100.00) / 100.00;
+		text += "TAX - $" + billTax + System.lineSeparator();
+		text += "TIP - $" + billTip + System.lineSeparator();
 		text += "TOTAL - $" + (subTotal + billTip + billTax);
 		
 		return text;
