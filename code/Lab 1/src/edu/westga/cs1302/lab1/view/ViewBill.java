@@ -41,11 +41,11 @@ public class ViewBill {
 		
 		text += System.lineSeparator();
 		text += "SUBTOTAL - $" + subTotal + System.lineSeparator();
-		double tax = subTotal * 0.1;
-		double tip = subTotal * 0.2;
-		text += "TAX - $" + tax + System.lineSeparator();
-		text += "TIP - $" + tip + System.lineSeparator();
-		text += "TOTAL - $" + (subTotal + tip + tax);
+		double billTax = subTotal * Bill.TAX;
+		double billTip = subTotal * Bill.TIP;
+		text += "TAX - $" + billTip + System.lineSeparator();
+		text += "TIP - $" + billTax + System.lineSeparator();
+		text += "TOTAL - $" + (subTotal + billTip + billTax);
 		
 		return text;
 	}
