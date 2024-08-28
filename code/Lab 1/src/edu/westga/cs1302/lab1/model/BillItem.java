@@ -2,7 +2,7 @@ package edu.westga.cs1302.lab1.model;
 
 /** Stores information for a single item on a bill.
  * 
- * @author CS 1302
+ * @author zbailey2
  * @version Fall 2024
  */
 public class BillItem {
@@ -30,7 +30,6 @@ public class BillItem {
 		this.amount = amount;
 	}
 	
-
 	/** Return the name for the bill item
 	 * 
 	 * @precondition none
@@ -42,7 +41,6 @@ public class BillItem {
 		return this.name;
 	}
 	
-
 	/** Return the amount for the bill item
 	 * 
 	 * @precondition none
